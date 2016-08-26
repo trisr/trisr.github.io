@@ -12,6 +12,14 @@
 </div>
 
 <script type="text/javascript">
+  window.addEventListener('message', function(event) {
+    if(~event.origin.indexOf('http://localhost:3000/')) {
+      console.log(event.data);
+    } else {
+      return;
+    }
+  });
+
   function closeBtn() {
     window.parent.closeModal();
   }
