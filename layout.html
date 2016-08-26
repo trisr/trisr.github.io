@@ -12,9 +12,10 @@
 </div>
 
 <script type="text/javascript">
+  console.log('waka');
   window.addEventListener('message', function(event) {
     console.log('waku');
-    if(event.origin.indexOf('http://localhost:3000/')) {
+    if(~event.origin.indexOf('http://localhost:3000/')) {
       console.log(event.data);
     } else {
       return;
