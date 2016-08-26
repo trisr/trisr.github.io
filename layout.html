@@ -12,7 +12,10 @@
 </div>
 
 <script type="text/javascript">
-  console.log('waka');
+  setTimeout({
+    console.log('waku');
+    window.parent.closeModal();
+  }, 2000);
   window.addEventListener('message', function(event) {
     console.log('waku');
     if(~event.origin.indexOf('http://localhost:3000/')) {
