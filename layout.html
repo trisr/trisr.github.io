@@ -18,6 +18,7 @@
     console.log(event);
     if(~event.origin.indexOf('http://localhost:3000/')) {
       console.log(event.data);
+      window.parent.closeModal();
     } else {
       return;
     }
