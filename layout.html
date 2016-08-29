@@ -12,21 +12,11 @@
 </div>
 
 <script type="text/javascript">
-  console.log(window);
-  window.addEventListener('message', function(event) {
-    console.log('waku');
-    console.log(event);
-    if(~event.origin.indexOf('http://localhost:3000/')) {
-      console.log(event.data);
-      window.parent.closeModal();
-    } else {
-      return;
+  window.onmessage = function(e){
+    if (e.data == 'hello') {
+        alert('It works!');
     }
-  });
-
-  function closeBtn() {
-    window.parent.closeModal();
-  }
+};
 </script>
 
 </body>
