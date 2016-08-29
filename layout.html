@@ -13,16 +13,19 @@
 
 <script type="text/javascript">
   console.log(window);
-  window.addEventListener('message', function(event) {
-    console.log('waku');
-    console.log(event);
-    if(~event.origin.indexOf('http://localhost:3000/')) {
-      console.log(event.data);
-      window.parent.closeModal();
-    } else {
-      return;
-    }
-  });
+  setTimeout(function() {
+    window.addEventListener('message', function(event) {
+      console.log('waku');
+      console.log(event);
+      if(~event.origin.indexOf('http://localhost:3000/')) {
+        console.log(event.data);
+        window.parent.closeModal();
+      } else {
+        return;
+      }
+    });
+
+  }, 2000);
 
   function closeBtn() {
     window.parent.closeModal();
