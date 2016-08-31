@@ -12,21 +12,14 @@
 </div>
 
 <script type="text/javascript">
-  console.log(window);
-  window.addEventListener('message', function(event) {
-    console.log('waku');
-    console.log(event);
-    if(~event.origin.indexOf('http://localhost:3000/')) {
-      console.log(event.data);
-      window.parent.closeModal();
-    } else {
-      return;
-    }
-  });
+  var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+var eventer = window[eventMethod];
+var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
 
-  function closeBtn() {
-    window.parent.closeModal();
-  }
+// Listen to message from child window
+eventer(messageEvent,function(e) {
+  console.log('parent received message!:  ',e.data);
+},false);
 </script>
 
 </body>
