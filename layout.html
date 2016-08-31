@@ -4,7 +4,7 @@
 </head>
 <body>
 
-<div id="iniloh" style="margin-top: 30px; text-align: center;">
+<div style="margin-top: 30px; text-align: center;">
   <p>
     You may close this tab
     <button onclick="closeBtn()">Close</button>
@@ -12,14 +12,22 @@
 </div>
 
 <script type="text/javascript">
-  var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
-var eventer = window[eventMethod];
-var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+  localStorage.setItem('testItem', 'waku');
+  console.log(window);
+  window.addEventListener('message', function(event) {
+    console.log('waku');
+    console.log(event);
+    if(~event.origin.indexOf('http://localhost:3000/')) {
+      console.log(event.data);
+      window.parent.closeModal();
+    } else {
+      return;
+    }
+  });
 
-// Listen to message from child window
-eventer(messageEvent,function(e) {
-  console.log('parent received message!:  ',e.data);
-},false);
+  function closeBtn() {
+    window.parent.closeModal();
+  }
 </script>
 
 </body>
