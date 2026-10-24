@@ -11,6 +11,7 @@
 }
 
 .site-title {
+    font-family: "IBM Plex Sans", sans-serif;
     font-size: 26px;
     font-weight: 300;
     line-height: 56px;
@@ -25,6 +26,7 @@
 }
 
 .site-nav {
+    font-family: "IBM Plex Sans", sans-serif;
     float: right;
     line-height: 56px;
 
@@ -115,6 +117,7 @@
  * Site footer
  */
 .site-footer {
+    font-family: "IBM Plex Sans", sans-serif;
     border-top: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
 }
@@ -186,6 +189,10 @@
  */
 .page-content {
     padding: $spacing-unit 0;
+}
+
+.page-content p {
+    font-family: "Montserrat", sans-serif;
 }
 
 .page-heading {
