@@ -92,6 +92,23 @@
     }
 }
 
+.profile-photo {
+    width: 162px;
+    height: 162px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: $spacing-unit;
+}
+
+.profile-subtitle {
+    margin-top: -15px;
+    margin-bottom: $spacing-unit;
+    color: $grey-color;
+    font-size: 24px;
+}
+
 
 
 /**

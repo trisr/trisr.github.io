@@ -1,16 +1,10 @@
 ---
-layout: page
+layout: default
 title: About
 ---
 
-Welcome Master!!
+<img class="profile-photo" src="{{ '/assets/profile.jpg' | relative_url }}" alt="Portrait of Tris Ramadhan" width="162" height="162">
 
-This is the base Jekyll theme. You can find out more info about customizing the Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+<p class="profile-subtitle">Software Engineer</p>
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
-
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+I’m a web platform engineer with 10+ years of experience building user-friendly products and leading collaborative teams across engineering, product, design, data, and QA. I’m now expanding into quality engineering, iOS, and backend development while continuing to create useful, high-quality experiences.
