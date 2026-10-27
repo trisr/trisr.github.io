@@ -3,8 +3,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <title>Tris Ramadhan</title>
+  <meta name="description" content="Web platform engineer with 10+ years building user-friendly products and leading cross-functional teams, expanding into quality engineering, iOS, and backend development.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tris Ramadhan">
+  <meta property="og:title" content="Tris Ramadhan">
+  <meta property="og:description" content="Web platform engineer with 10+ years building user-friendly products and leading cross-functional teams, expanding into quality engineering, iOS, and backend development.">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ '/assets/profile.jpg' | absolute_url }}">
+  <meta property="og:image:alt" content="Portrait of Tris Ramadhan">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Tris Ramadhan">
+  <meta name="twitter:description" content="Web platform engineer with 10+ years building user-friendly products and leading cross-functional teams, expanding into quality engineering, iOS, and backend development.">
+  <meta name="twitter:image" content="{{ '/assets/profile.jpg' | absolute_url }}">
+  <meta name="twitter:image:alt" content="Portrait of Tris Ramadhan">
 
   <link rel="icon" type="image/png" href="{{ '/favicon.png' | prepend: site.baseurl }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
